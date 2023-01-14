@@ -1,17 +1,4 @@
 
-function SendMail(){
-    var params = {
-        from_name : document.getElementById("Name").value,
-        email_id : document.getElementById("Email").value,
-        message : document.getElementById("Message").value,
-        phone : document.getElementById("Phone").value,
-        subject : document.getElementById("Subject").value
-    }
-    emailjs.send("service_88kktfa","template_txfaohc", params).then(function(res){
-        alert("Success!" + res.status)
-    })
-}
-
 
 
 (function($) {
@@ -95,7 +82,7 @@ function SendMail(){
 								data: formData,
 								contentType: false,
 								cache: false,
-								processData:false,
+								processData: true,
 								dataType: 'json',
 								success : function(data)
 								{
@@ -104,7 +91,7 @@ function SendMail(){
 									}else{
 										response = '<div class="err alert alert-danger">'+data.message+'</div>';
 									}
-									$('.ajax-form .ajax-message').html(response).delay(5000).hide('slow');
+									$(`.ajax-form, .ajax-message`).html(response).delay(5000).hide('slow');
 									$('.ajax-form')[0].reset();
 									grecaptcha.reset();
 								},
@@ -137,7 +124,7 @@ function SendMail(){
 								data: formData,
 								contentType: false,
 								cache: false,
-								processData:false,
+								processData:true,
 								dataType: 'json',
 								success : function(data)
 								{
