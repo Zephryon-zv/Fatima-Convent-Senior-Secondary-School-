@@ -44,6 +44,10 @@ body {
 	background-image: linear-gradient(#fffcdb, #a5542b, 45deg);
 }
 
+html.sr .Our_Title{
+	visibility: hidden;
+}
+
 /*=================================
 	1. HEADER
 =================================*/
@@ -3418,3 +3422,4 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#391800', end
 		width: 430px;
 	} 
 } */
+
