@@ -31,7 +31,7 @@ $txt = "You have recieved an email from ".$name ."\r\nEmail Id: " .$email ."\r\n
 
    if(empty($name) || empty($name) || empty($subject) || empty($message))
     {
-        header('location:index.php?error');
+        header('location:error-404.html');
     }
     else
    {
