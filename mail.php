@@ -38,7 +38,7 @@ $txt = "You have recieved an email from ".$name ."\r\nEmail Id: " .$email ."\r\n
        $to = "nurajabegum81@gmail.com";
         if(mail($to,$subject_mail,$message,$email,$txt, $subject))
        {
-           header("location:index.php?success");
+           header("location:thankyou.html");
        }
     }
  }
