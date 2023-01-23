@@ -124,7 +124,7 @@
 								data: formData,
 								contentType: false,
 								cache: false,
-								processData:true,
+								processData:false,
 								dataType: 'json',
 								success : function(data)
 								{
