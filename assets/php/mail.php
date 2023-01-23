@@ -14,7 +14,7 @@ if($email! = NULL){
     mail($t0, $subject, $txt, $headers);
 }
 
-header("location:../../thankyou.html")
+
 
 
 
