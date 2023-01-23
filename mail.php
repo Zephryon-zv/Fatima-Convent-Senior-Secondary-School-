@@ -29,7 +29,7 @@ $message = $_POST['message'];
 $subject = "Mail from fatima_school_website contact form";
 $txt = "You have recieved an email from ".$name ."\r\nEmail Id: " .$email ."\r\nPhone No: ". $phone ."\r\n Subject: " .$subject_mail ."\r\n Message:" .$message;
 
-   if(empty($name) || empty($name) || empty($subject) || empty($message))
+   if(empty($name) || empty($name) || empty($subject_mail) || empty($message))
     {
         header('location:error-404.html');
     }
