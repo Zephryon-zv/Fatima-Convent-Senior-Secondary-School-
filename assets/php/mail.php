@@ -11,7 +11,7 @@ $headers = "From: ".$name. "\r\n" .
 $txt = "You have recieved an email from ".$name ."\r\nEmail Id: " .$email ."\r\nPhone No: ". $phone ."\r\n Subject: " .$subject_mail ."\r\n Message:" .$message;
 
 if($email! = NULL){
-    mail($t0, $subject, $txt, $headers);
+    mail($to, $subject, $txt, $headers);
 }
 
 
