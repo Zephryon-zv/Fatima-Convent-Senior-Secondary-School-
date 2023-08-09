@@ -78,11 +78,11 @@
 				var formAction = jQuery(this).attr('action');
 				jQuery.ajax({
 					type: 'POST',
-					url: formAction,
+					url: './code.php',
 					data: formData,
 					contentType: false,
-					cache: true,
-					processData: false,
+					cache: false,
+					// processData: false,
 					dataType: 'json',
 					success: function (data) {
 						if (data.status == 1) {
@@ -119,7 +119,7 @@
 
 				jQuery.ajax({
 					type: 'POST',
-					url: formAction,
+					url: 'php/code.php',
 					data: formData,
 					contentType: false,
 					cache: false,
