@@ -81,7 +81,7 @@
 					url: formAction,
 					data: formData,
 					contentType: false,
-					cache: false,
+					cache: true,
 					processData: false,
 					dataType: 'json',
 					success: function (data) {
