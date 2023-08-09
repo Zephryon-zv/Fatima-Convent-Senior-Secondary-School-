@@ -13,7 +13,7 @@
 
        if(empty($name) || empty($name) || empty($mail) || empty($message))
        {
-         echo("Filled the info")
+         echo("Filled the info");
        }
        else
        {
@@ -21,7 +21,7 @@
 
            if(mail($to,$mail,$message,$txt, $headers))
            {
-              echo("Mail send")
+              echo("Mail send");
            }
        }
     }
