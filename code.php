@@ -13,7 +13,7 @@
 
        if(empty($name) || empty($name) || empty($mail) || empty($message))
        {
-           header('location:error-404.html');
+         echo("Filled the info")
        }
        else
        {
@@ -21,7 +21,7 @@
 
            if(mail($to,$mail,$message,$txt, $headers))
            {
-               header("Location: contact-1.html?mailsend");
+              echo("Mail send")
            }
        }
     }
