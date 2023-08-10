@@ -71,17 +71,18 @@
 
 
 			jQuery('.ajax-form').on('submit', function (event) {
-				event.preventDefault();
+				// event.preventDefault();
 				var response = '<div class="alert alert-warning alert-dismissable"> Processing.. </div>';
 				jQuery(this).find(".ajax-message").html(response).show('slow');
-				var formData = new FormData(this);
+				// Serialize the form data.
+				var formData = $(form).serialize();
 				var formAction = jQuery(this).attr('action');
 				jQuery.ajax({
 					type: 'POST',
-					url: './code.php',
+					url: 'php/code.php',
 					data: formData,
-					contentType: false,
 					cache: false,
+					// contentType: false,
 					// processData: false,
 					dataType: 'json',
 					success: function (data) {
