@@ -71,9 +71,10 @@
 
 <body id="bg">
 	<div class="page-wraper">
-		<div id="loading-icon-bx" class="preloader">
-			<!-- <div class="icon"></div> -->
-		</div>
+		<!-- <div id="loading-icon-bx" class="preloader">
+			<div class="icon"></div>
+		</div> -->
+
 
 		<!-- Header Top ==== -->
 		<header class="header rs-nav">
@@ -243,7 +244,8 @@
 							</div>
 						</div>
 						<div class="col-lg-7 col-md-7">
-							<form class="contact-bx ajax-form" method="POST" action="php/code.php">
+							<form class="contact-bx ajax-form" method="POST" action="contact.php" id="contact-form"
+								role="form">
 								<div class="ajax-message"></div>
 								<div class="heading-bx left">
 									<h2 class="title-head">Get In <span>Touch</span></h2>
@@ -254,69 +256,100 @@
 									<div class="col-lg-6">
 										<div class="form-group">
 											<div class="input-group">
-												<label>Your Name</label>
+												<label for="form_name">Your Name</label>
 												<input name="name" type="text" required
-													class="form-control valid-character" id="Name">
+													class="form-control valid-character" id="name">
+												<div class="help-block with-errors"></div>
 											</div>
 										</div>
-									</div>
-									<div class="col-lg-6">
-										<div class="form-group">
-											<div class="input-group">
-												<label>Your Email Address</label>
-												<input name="email" type="email" class="form-control" required
-													id="Email">
+										<div class="col-md-6">
+											<div class="form-group">
+												<div class="input-group">
+													<label for="form_lastname">Last Name</label>
+													<input name="name" type="text" required
+														class="form-control valid-character" id="form_lastname">
+													<div class="help-block with-errors"></div>
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="col-lg-6">
-										<div class="form-group">
-											<div class="input-group">
-												<label>Your Phone</label>
-												<input name="phone" type="text" required class="form-control int-value"
-													id="Phone">
+										<div class="col-md-6">
+											<div class="form-group">
+												<div class="input-group">
+													<label for="form_email">Your Email Address</label>
+													<input name="email" type="email" class="form-control" required
+														id="form_email">
+													<div class="help-block with-errors"></div>
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="col-lg-6">
-										<div class="form-group">
-											<div class="input-group">
-												<label>Subject</label>
-												<input name="subject" type="text" required class="form-control"
-													id="Subject">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="form_need">Please specify your need *</label>
+												<select id="form_need" name="need" class="form-control"
+													required="required" data-error="Please specify your need.">
+													<option value=""></option>
+													<option value="Request quotation">
+														Request quotation
+													</option>
+													<option value="Request order status">
+														Request order status
+													</option>
+													<option value="Request copy of an invoice">
+														Request copy of an invoice
+													</option>
+													<option value="Other">Other</option>
+												</select>
+												<div class="help-block with-errors"></div>
 											</div>
 										</div>
-									</div>
-									<div class="col-lg-12">
-										<div class="form-group">
-											<div class="input-group">
-												<label>Type Message</label>
-												<textarea name="message" rows="4" class="form-control" required
-													id="Message"></textarea>
+										<div class="col-md-6">
+											<div class="form-group">
+												<div class="input-group">
+													<label>Your Phone</label>
+													<input name="phone" type="text" required
+														class="form-control int-value" id="Phone">
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="col-lg-12">
-										<div class="form-group">
-											<div class="input-group">
-												<div class="g-recaptcha"
-													data-sitekey="6LfBntMjAAAAAFpu7LXiWpAsDxFq1HxFBz687My4"
-													data-callback="verifyRecaptchaCallback"
-													data-expired-callback="expiredRecaptchaCallback"
-													data-secretkey="6Lec4sojAAAAAAQJL7uPZK4AnXyZcbvou9am3bgn"
-													id="g-recaptcha"></div>
-												<input class="form-control d-none" style="display:none;"
-													data-recaptcha="true" required
-													data-error="Please complete the Captcha">
+										<div class="col-lg-6">
+											<div class="form-group">
+												<div class="input-group">
+													<label>Subject</label>
+													<input name="subject" type="text" required class="form-control"
+														id="Subject">
+												</div>
 											</div>
 										</div>
+										<div class="col-lg-12">
+											<div class="form-group">
+												<div class="input-group">
+													<label for="form_message">Type Message</label>
+													<textarea name="message" rows="4" class="form-control" required
+														id="form_message"></textarea>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-12">
+											<div class="form-group">
+												<div class="input-group">
+													<div class="g-recaptcha"
+														data-sitekey="6LfBntMjAAAAAFpu7LXiWpAsDxFq1HxFBz687My4"
+														data-callback="verifyRecaptchaCallback"
+														data-expired-callback="expiredRecaptchaCallback"
+														data-secretkey="6Lec4sojAAAAAAQJL7uPZK4AnXyZcbvou9am3bgn"
+														id="g-recaptcha"></div>
+													<input class="form-control d-none" style="display:none;"
+														data-recaptcha="true" required
+														data-error="Please complete the Captcha">
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-12">
+											<button name="btn-send" type="submit" value="Submit" class="btn button-md"
+												id="btn-send"> Send
+												Message</button>
+										</div>
 									</div>
-									<div class="col-lg-12">
-										<button name="btn-send" type="submit" value="Submit" class="btn button-md"
-											onclick="btn_send()" id="btn-send"> Send
-											Message</button>
-									</div>
-								</div>
 							</form>
 						</div>
 						<div class="col-lg-6 col-md-6 p-lr0 d-flex" style="flex: 2 0 74%;
@@ -463,6 +496,7 @@
 	<script src="assets/vendors/owl-carousel/owl.carousel.js"></script>
 	<script src="assets/js/functions.js"></script>
 	<script src="assets/js/contact.js"></script>
+	<script src="assets/js/script.js"></script>
 	<script src='assets/vendors/switcher/switcher.js'></script>
 	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
 	</script>
